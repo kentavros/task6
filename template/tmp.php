@@ -34,18 +34,6 @@
         <img src="img/music.jpg">
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 <footer class="modal-footer navbar-inverse">
     <div class="container">
         <a class="navbar-brand" style="float: right" href="#">Task 6 - Good music will be eternal!</a>
