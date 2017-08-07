@@ -3,7 +3,8 @@ class Musician implements iMusician
 {
     protected $name;
     protected $gener;
-    protected $instrument=array();
+    protected $instrument = array();
+    protected $nameBand = array();
 
     public function  __construct($name, $gener)
     {
@@ -20,10 +21,21 @@ class Musician implements iMusician
     {
         return $this->instrument;
     }
-    public function assingToBand(iBand $nameBand){}
+    public function assingToBand(iBand $nameBand)
+    {
+        $this->nameBand[$nameBand->getName()] = $nameBand->getGenre();
+    }
+
+
     public function getMusicianType()
     {
-        return $this->name . ' - '.$this->gener;
+        $musician = array(
+            $this->name,
+            $this->gener,
+            $this->instrument,
+            $this->nameBand
+        );
+        return $musician;
     }
 
 }
